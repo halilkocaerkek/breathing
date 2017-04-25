@@ -1,2 +1,2 @@
 # breathing
-breathing exercise app - ionic
+breathing exercise app - ionic 
