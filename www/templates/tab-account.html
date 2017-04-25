@@ -1,9 +1,13 @@
 <ion-view view-title="Settings">
     <ion-content>
         <ion-list>
-            <ion-toggle ng-model="settings.enableFriends">
-                Enable Friends
-            </ion-toggle>
+            <h2 class="title">{{settings.repeatCount}}</h2>
+
+            <div class="item range range-positive">
+                <i class="icon ion-minus-round"></i>
+                <input type="range" name="volume" min="0" max="20" ng-model="settings.repeatCount" value="{{settings.repeatCount}}">
+                <i class="icon ion-plus-round"></i>
+            </div>
         </ion-list>
     </ion-content>
 </ion-view>

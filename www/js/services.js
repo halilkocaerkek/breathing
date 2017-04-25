@@ -10,26 +10,26 @@ angular.module('starter.services', [])
     //if (sStages === null || typeof sStages === 'undefined' || sStages == 'undefined') {
     stages = [{
             id: 0,
-            name: 'Stage 1',
-            length: new Number(30),
+            name: 'Inhale',
+            length: new Number(10),
             color: '#CDDC39'
         },
         {
             id: 1,
-            name: 'Stage 2',
-            length: new Number(50),
+            name: 'Retain',
+            length: new Number(10),
             color: '#FFB300'
         },
         {
             id: 2,
-            name: 'Stage 3',
-            length: new Number(50),
+            name: 'Exhale',
+            length: new Number(10),
             color: '#4FC3F7'
         },
         {
             id: 3,
-            name: 'Stage 4',
-            length: new Number(50),
+            name: 'Sustain',
+            length: new Number(11),
             color: '#FF7043'
         }
 
@@ -70,12 +70,15 @@ angular.module('starter.services', [])
             getStages();
             // 0 20 40 60 80 100 120 140 160 180 200 220
             var c = this.count();
-            var tics = "";
-            for (i = 0; i < c; i += 20) {
-                tics += i + " ";
+            var tics = "0 ";
+            //for (i = 0; i < c; i += 20) {
+            //    tics += i + " ";
+            //}
+            for (i = 0; i < stages.length; i++) {
+                tics += stages[i].length + " ";
             }
             tics += c;
-            return tics;
+            return "";
         },
 
         highlights: function() {

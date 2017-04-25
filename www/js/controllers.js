@@ -2,11 +2,10 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope, $interval, Stages, $ionicPlatform) {
     var h = window.screen.height - 300;
-
+    $scope.repeatCount = new Number(5);
     var stages;
     var max;
     var min;
-
     var timer;
 
     stages = Stages.all();
@@ -17,12 +16,14 @@ angular.module('starter.controllers', [])
 
     function init() {
         $scope.gauge = null;
+        $scope.counter = $scope.repeatCount;
         $scope.gauge = {
             value: 0,
             minValue: 0,
             maxValue: Stages.count(),
             width: h,
             height: h,
+            units: $scope.counter,
             dataTitle: "Nefes Al",
             majorTics: Stages.majorTics(),
             highlights: Stages.highlights()
@@ -39,6 +40,11 @@ angular.module('starter.controllers', [])
             v++;
             if (v > max) {
                 v = min;
+                $scope.counter--;
+                if (new Number($scope.counter) == 0) {
+                    $scope.counter = $scope.repeatCount;
+                    $scope.stop();
+                }
             }
             $scope.gauge.value = v;
             stages = Stages.all();

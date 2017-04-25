@@ -1,12 +1,10 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="Breating Exercise">
     <ion-content class="padding">
-        <canvas canvas-gauge id="myCanvas" width="{{gauge.width}}" height="{{gauge.height}}" data-value="{{gauge.value}}" data-title="{{gauge.dataTitle}}" data-min-value="{{gauge.minValue}}" data-max-value="{{gauge.maxValue}}" data-major-ticks="{{gauge.majorTics}}"
-            data-minor-ticks="2" data-stroke-ticks="true" data-units="..." data-value-format="3.2" data-glow="true" data-animation-delay="10" data-animation-duration="200" data-animation-fn="bounce" data-colors-needle="#f00 #00f" data-highlights="{{gauge.highlights}}"
-            data-circles-outervisible="true" data-circles-middlevisible="true" data-circles-innervisible="true" data-valuebox-visible="true" data-valuetext-visible="true" data-colors-needle-start="rgba(240, 128, 128, 1)" data-colors-needle-end="rgba(255, 160, 122, .9)"
-            data-colors-needle-shadowup="rgba(2, 255, 255, 0.2)" data-colors-needle-shadowdown="rgba(188, 143, 143, 0.45)" data-colors-needle-circle-outerstart="#f0f0f0" data-colors-needle-circle-outerend="#ccc" data-colors-needle-circle-innerstart="#e8e8e8"
-            data-colors-needle-circle-innerend="#f5f5f5" data-colors-valuebox-rectstart="#888" data-colors-valuebox-rectend="#666" data-colors-valuebox-background="#babab2" data-colors-valuebox-shadow="rgba(0, 0, 0, 1)" data-colors-valuetext-foreground="#444"
-            data-colors-valuetext-shadow="rgba(0, 0, 0, 0.3)" data-colors-circle-shadow="rgba(0, 0, 0, 0.3)" data-colors-circle-outerstart="#ddd" data-colors-circle-outerend="#aaa" data-colors-circle-middlestart="#eee" data-colors-circle-middleend="#f0f0f0"
-            data-color-plate="#3a3" data-colors-circle-innerstart="#fafafa" data-colors-circle-innerend="#ccc"></canvas>
+        <canvas data-type="radial-gauge" canvas-gauge id="myCanvas" width="{{gauge.width}}" height="{{gauge.height}}" data-value="{{gauge.value}}" data-title="{{gauge.dataTitle}}" data-min-value="{{gauge.minValue}}" data-max-value="{{gauge.maxValue}}" data-major-ticks="{{gauge.majorTics}}"
+            data-units="{{counter}}" data-highlights="{{gauge.highlights}}" data-ticks-angle="360" data-start-angle="180" data-stroke-ticks="false" data-highlights="false" data-color-plate="#222" data-color-major-ticks="#f5f5f5" data-color-minor-ticks="#ddd"
+            data-color-numbers="#ccc" data-color-needle="rgba(240, 128, 128, 1)" data-color-needle-end="rgba(255, 160, 122, .9)" data-value-box="false" data-value-text-shadow="false" data-color-circle-inner="#fff" data-color-needle-circle-outer="#ccc" data-needle-circle-size="15"
+            data-needle-circle-outer="false" data-animation-rule="linear" data-needle-type="line" data-needle-start="75" data-needle-end="99" data-needle-width="3" data-borders="true" data-border-inner-width="0" data-border-middle-width="0" data-border-outer-width="10"
+            data-color-border-outer="#ccc" data-color-border-outer-end="#ccc" data-color-needle-shadow-down="#222" data-border-shadow-width="0" data-animation-duration="1500"></canvas>
         <div class="button-bar">
             <a class="button  button-positive button-block  button-outline  icon-left ion-play" ng-click="start()">Start</a>
             <a class="button button-assertive button-block  button-outline  icon-right ion-stop" ng-click="stop()">Stop</a>
